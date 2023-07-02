@@ -279,6 +279,10 @@ textarea {
     font-size: 60%;
   }
 
+  .hero {
+    height: 850px;
+  }
+
   .socials {
     z-index: 1;
     position: relative;
@@ -350,19 +354,21 @@ textarea {
 
   .project_img img {
     margin: 0;
+    height: 300px;
     margin-top: 4rem;
-    width: 3004px;
+    width: 400px;
+    overflow: hidden;
   }
 
   .portfolio__element {
     min-width: 85vw;
-    height: 720px;
+    height: 740px;
     font-size: 2rem;
   }
 
   .portfolio__element p {
     min-width: 40vw;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
     font-size: 2rem;
   }
 
