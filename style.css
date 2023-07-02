@@ -61,6 +61,10 @@ li {
   text-shadow: 2px 2px 5px black;
 }
 
+.navbar__links a:hover {
+  color: var(--color-greenyellow);
+}
+
 .hero {
   background-color: aqua;
   background-image: linear-gradient(
@@ -82,7 +86,7 @@ li {
   float: right;
   position: -webkit-sticky;
   position: sticky;
-  top: 50%;
+  top: 50vh;
   right: 1%;
 }
 
@@ -98,6 +102,13 @@ li {
   width: 48px;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+.twitter_icon img {
+  width: 41px;
+  height: 41px;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 
 .socials li:hover {
@@ -144,8 +155,8 @@ li {
   text-align: center;
   margin: 0;
   max-width: 1300px;
-  height: 350px;
-  max-width: 750px;
+  height: 360px;
+  max-width: 90vw;
   background-image: var(--color-bg-portfolio2);
   /* background-color: var(--color-white); */
   box-shadow: 5px 5px 10px var(--color-black);
@@ -168,14 +179,20 @@ li {
 .portfolio_block {
   color: var(--color-black);
   max-width: 70vmax;
+  /* width: 750px; */
   margin: 8rem auto;
 }
 
 .btns {
-  display: flex;
-  transform: translateY(-4.5rem);
-  margin: 0 2.5rem;
+  padding-top: 2rem;
+  margin-left: 0rem;
+
   font-size: 1.4rem;
+}
+
+.btns ul {
+  display: flex;
+  padding: 0 2rem;
 }
 
 .btns li {
@@ -257,15 +274,35 @@ textarea {
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 480px) {
   html {
     font-size: 60%;
   }
+
   .socials {
     z-index: 1;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 30%;
+    position: relative;
+    top: 240px;
+    right: 115px;
+  }
+
+  .socials ul {
+    display: flex;
+    gap: 4rem;
+    background-image: none;
+  }
+
+  .instagram_icon img,
+  .linkedin_icon img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .twitter_icon img {
+    height: 54px;
+    width: 54px;
+    margin-left: 5px;
+    transform: translateY(4.5px);
   }
 
   .navbar {
@@ -276,8 +313,17 @@ textarea {
   .intro {
     margin: 0;
     padding-top: 40%;
-    min-width: 200px;
-    justify-content: left;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .intro h2 {
+    margin-bottom: 12rem;
+  }
+
+  .intro p {
+    font-size: 1.5em;
+    text-align: justify;
   }
 
   .portfolio h1 {
@@ -294,9 +340,6 @@ textarea {
   .portfolio_block {
     padding: 3rem;
     margin: 0;
-    /* width: 405px; */
-    /* display: flex; */
-    /* flex-direction: column; */
   }
 
   .project_img {
@@ -308,7 +351,7 @@ textarea {
   .project_img img {
     margin: 0;
     margin-top: 4rem;
-    width: 300px;
+    width: 3004px;
   }
 
   .portfolio__element {
@@ -319,7 +362,7 @@ textarea {
 
   .portfolio__element p {
     min-width: 40vw;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     font-size: 2rem;
   }
 
@@ -328,6 +371,11 @@ textarea {
   }
 
   .btns {
+    margin: 0;
+    padding: 0;
+  }
+
+  .btns ul {
     margin: 0;
     padding: 2rem;
     font-size: 2rem;
