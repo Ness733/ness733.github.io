@@ -26,27 +26,6 @@ li {
   list-style: none;
 }
 
-@media (max-width: 1366px) {
-  html {
-    font-size: 12px;
-  }
-
-  .links {
-    float: right;
-  }
-
-  .navbar {
-    padding: 0;
-    /* min-width: 430px; */
-    /* max-width: 100vw; */
-  }
-
-  .navbar__links {
-    min-width: 390px;
-    /* padding-right: 6em; */
-  }
-}
-
 .logo {
   position: absolute;
   left: 1rem;
@@ -255,4 +234,107 @@ textarea {
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 12px;
+  }
+
+  .links {
+    float: right;
+  }
+
+  .navbar {
+    padding: 0;
+    /* min-width: 430px; */
+    /* max-width: 100vw; */
+  }
+
+  .navbar__links {
+    min-width: 390px;
+    /* padding-right: 6em; */
+  }
+}
+
+@media (max-width: 440px) {
+  html {
+    font-size: 60%;
+  }
+  .socials {
+    z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30%;
+  }
+
+  .navbar {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .intro {
+    margin: 0;
+    padding-top: 40%;
+    max-width: 200px;
+    justify-content: left;
+  }
+
+  .portfolio h1 {
+    margin: 0;
+    padding-top: 5rem;
+  }
+
+  .portfolio {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .portfolio_block {
+    padding: 20px;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project_img {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .project_img img {
+    margin: 0;
+    margin-top: 4rem;
+    width: 300px;
+  }
+
+  .portfolio__element {
+    min-width: inherit;
+    height: 720px;
+    font-size: 2rem;
+  }
+
+  .portfolio__element p {
+    min-width: inherit;
+    padding-bottom: 8rem;
+    font-size: 2rem;
+  }
+
+  .portfolio__element ul {
+    position: relative;
+  }
+
+  .btns {
+    margin: 0;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  .contact_section {
+    max-width: inherit;
+    padding: 40px;
+  }
 }
