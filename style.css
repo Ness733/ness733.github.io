@@ -145,7 +145,7 @@ li {
   margin: 0;
   max-width: 1300px;
   height: 350px;
-  min-width: 750px;
+  max-width: 750px;
   background-image: var(--color-bg-portfolio2);
   /* background-color: var(--color-white); */
   box-shadow: 5px 5px 10px var(--color-black);
@@ -257,7 +257,7 @@ textarea {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   html {
     font-size: 60%;
   }
@@ -276,7 +276,7 @@ textarea {
   .intro {
     margin: 0;
     padding-top: 40%;
-    max-width: 200px;
+    min-width: 200px;
     justify-content: left;
   }
 
@@ -292,11 +292,11 @@ textarea {
   }
 
   .portfolio_block {
-    padding: 20px;
-    margin-top: 2rem;
-
-    display: flex;
-    flex-direction: column;
+    padding: 3rem;
+    margin: 0;
+    /* width: 405px; */
+    /* display: flex; */
+    /* flex-direction: column; */
   }
 
   .project_img {
@@ -312,13 +312,13 @@ textarea {
   }
 
   .portfolio__element {
-    min-width: inherit;
+    min-width: 85vw;
     height: 720px;
     font-size: 2rem;
   }
 
   .portfolio__element p {
-    min-width: inherit;
+    min-width: 40vw;
     padding-bottom: 8rem;
     font-size: 2rem;
   }
