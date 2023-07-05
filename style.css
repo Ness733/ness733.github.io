@@ -44,12 +44,22 @@ li {
   width: 3rem;
 }
 
+.logo :hover {
+  cursor: pointer;
+}
+
 .navbar {
   display: flex;
   height: 4rem;
   background-color: var(--color-greenyellow);
-  min-width: 100vmin;
+  width: 100%;
   align-items: center;
+  z-index: 100;
+}
+
+.navbar.sticky {
+  position: fixed;
+  background-color: rgba(134, 253, 140, 0.8);
 }
 
 .navbar__links a {
@@ -58,7 +68,7 @@ li {
 
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-white);
   text-shadow: 2px 2px 6px black;
 }
 
@@ -87,9 +97,8 @@ li {
     ),
     url(./imgs/img2.jpg);
   background-size: cover;
-  min-height: 55vmax;
+  min-height: 54vmax;
   padding: 0 3em;
-  margin-bottom: 5rem;
   font-size: 2rem;
 }
 
@@ -179,6 +188,7 @@ li {
   color: var(--color-white);
   background-size: cover;
   text-align: left;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
@@ -450,6 +460,7 @@ textarea {
     display: block;
     padding: 0;
     margin: 0;
+    padding-top: 4rem;
   }
 
   .portfolio_block {
