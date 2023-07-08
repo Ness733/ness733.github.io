@@ -398,30 +398,41 @@ textarea {
   }
 
   .socials {
+    float: left;
     display: block;
+    top: 520px;
+    right: 90px;
     z-index: 1;
-    position: relative;
-    top: 440px;
-    right: 105px;
+    position: absolute;
   }
 
   .socials ul {
+    text-align: center;
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     background-image: none;
   }
 
-  .instagram_icon img,
+  .socials li {
+    width: 58px;
+    height: 58px;
+  }
+
+  .socials img {
+    height: 58px;
+    width: 58px;
+  }
+
+  /* .instagram_icon img,
   .linkedin_icon img {
     height: 70px;
     width: 70px;
-  }
+  } */
 
   .twitter_icon img {
-    height: 54px;
-    width: 54px;
-    margin-left: 5px;
-    transform: translateY(4.5px);
+    margin-left: 0;
+    height: 47px;
+    width: 47px;
   }
 
   .navbar {

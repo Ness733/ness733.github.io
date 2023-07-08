@@ -6,9 +6,9 @@ const btnPortfolio = document.querySelector(".btn_portfolio");
 const btnContact = document.querySelector(".btn_contact");
 
 // Social Buttons
-const btnInstagram = document.querySelector(".instagram_icon");
-const btnTwitter = document.querySelector(".twitter_icon");
-const btnLinkedin = document.querySelector(".linkedin_icon");
+const btnInstagram = document.querySelectorAll(".instagram_icon");
+const btnTwitter = document.querySelectorAll(".twitter_icon");
+const btnLinkedin = document.querySelectorAll(".linkedin_icon");
 
 // Proyects Buttons
 const btnLive = document.querySelector(".btn__live");
@@ -67,6 +67,14 @@ const link = function (url) {
   newTab.focus();
 };
 
-btnInstagram.addEventListener("click", () => link(ig));
-btnTwitter.addEventListener("click", () => link(tw));
-btnLinkedin.addEventListener("click", () => link(li));
+btnInstagram.forEach((x) => {
+  x.addEventListener("click", () => link(ig));
+});
+
+btnTwitter.forEach((x) => {
+  x.addEventListener("click", () => link(tw));
+});
+
+btnLinkedin.forEach((x) => {
+  x.addEventListener("click", () => link(li));
+});
