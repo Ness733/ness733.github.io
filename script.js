@@ -1,4 +1,5 @@
 "use strict";
+
 // Navigation Buttons
 const navBar = document.querySelector(".navbar");
 const btnHome = document.querySelector(".btn_logo");
@@ -24,6 +25,12 @@ const sectionContact = document.querySelector(".contact_section");
 const ig = "https://www.instagram.com/ness733/";
 const tw = "https://twitter.com/Ness_ar733";
 const li = "https://www.linkedin.com/in/nestor-rosales-7848b6266/";
+
+// Submit form
+const formSubmit = document.querySelector(".form_information");
+const formSent = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close_modal");
 
 // Sticky navigation bar
 
@@ -61,7 +68,6 @@ btnContact.addEventListener("click", function (e) {
 });
 
 // Social buttons
-
 const link = function (url) {
   const newTab = window.open(url, "_blank");
   newTab.focus();
@@ -77,4 +83,43 @@ btnTwitter.forEach((x) => {
 
 btnLinkedin.forEach((x) => {
   x.addEventListener("click", () => link(li));
+});
+
+// Form functionality
+closeModal.addEventListener("click", function (e) {
+  e.preventDefault();
+  formSent.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+formSubmit.addEventListener("submit", function (e) {
+  try {
+    e.preventDefault();
+    this.contact_number.value = (Math.random() * 100000) | 0;
+    emailjs.sendForm("service_xvs3mtg", "contact_form", this).then(
+      function () {
+        formSubmit.fullname.value = "";
+        formSubmit.subject.value = "";
+        formSubmit.email.value = "";
+        formSent.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+        // console.log("Success!");
+      },
+      function (error) {
+        formSent.console.log("Failed...", error);
+      }
+    );
+  } catch (error) {
+    formSent.textContent = "";
+    const html = `
+    <p>
+      🔴 Something went wrong 🔴
+      Please try again later.
+    </p>
+    <button class="close_modal">Okay!</button>
+    `;
+    formSent.insertAdjacentHTML("afterbegin", html);
+    formSent.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  }
 });

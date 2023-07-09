@@ -8,10 +8,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('WTOlGcumvWIKf2lfe');
+      })();
+    </script>
     <script defer src="script.js"></script>
+    
     <title>Portfolio v2</title>
   </head>
   <body>
+    <div class="modal hidden">
+      <p>
+        Your message has been sent succesfully! 🎉<br>I'll get back to you as soon as possible 🫡
+      </p>
+      <button class="close_modal">Okay!</button>
+    </div>
+    <div class="overlay hidden"></div>
     <header class="navbar">
       <div class="logo">
         <img class="btn_logo" src="./icons/logo web.png" alt="" />
@@ -95,28 +112,26 @@
   </div>
     <div class="contact_section">
       <div class="Contact">
-        <form action="action.js">
-          <label for="fname">First Name</label>
+        <form class="form_information">
+          <input type="hidden" name="contact_number">
+          <label for="fname">Full Name</label>
           <input
             type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your name..."
+            name="fullname"
+            placeholder="Your full name."
           />
-          <label for="lname">Last Name</label>
+          <label for="lname">Contact E-mail</label>
           <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name..."
+            type="text"            
+            name="email"
+            placeholder="Contact Email."
           />
           <textarea
-            name="subject"
-            id="subject"
+            name="subject"            
             placeholder="Your message here..."
             style="height: 200px"
           ></textarea>
-          <input type="submit" value="submit" />
+          <input class="send_submit" type="submit" value="Send" />
         </form>
       </div>
     </div>
