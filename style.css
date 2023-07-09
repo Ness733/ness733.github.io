@@ -107,7 +107,7 @@ li {
 
 .navbar.sticky {
   position: fixed;
-  background-color: rgba(134, 253, 140, 0.8);
+  background-color: rgba(247, 210, 4, 0.89);
 }
 
 .navbar__links a {
@@ -220,6 +220,7 @@ li {
 }
 
 .intro h2 {
+  margin: 0;
   color: var(--color-greenyellow);
   padding-top: 0.2em;
 }
@@ -231,20 +232,35 @@ li {
 
 .portfolio {
   display: grid;
-  background-image: var(--color-bg-portfolio2);
+  /* background-image: var(--color-bg-portfolio2); */
+  background-color: #353333;
+  opacity: 1;
+  background-image: radial-gradient(#efb00f 2px, transparent 2px),
+    radial-gradient(#efb00f 2px, #353333 2px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+
   color: var(--color-white);
-  background-size: cover;
+
   text-align: left;
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
-.portfolio h1,
-h2 {
+.portfolio h1 {
   text-align: center;
   font-size: 5rem;
   margin: 7rem 15rem;
+  margin-bottom: 4rem;
   text-shadow: 4px 3px 5px var(--color-black);
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  width: 900px;
+  text-shadow: var(--text-shadow);
 }
 
 .portfolio__element {
@@ -260,6 +276,7 @@ h2 {
 
 .portfolio__element h2 {
   text-align: left;
+  margin: 0;
   padding: 2rem 2rem;
   color: black;
   text-shadow: none;
