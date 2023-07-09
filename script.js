@@ -90,36 +90,61 @@ closeModal.addEventListener("click", function (e) {
   e.preventDefault();
   formSent.classList.add("hidden");
   overlay.classList.add("hidden");
+  formSent.querySelector("p").remove();
 });
 
+const modalWindow = function (msg = "") {
+  let html = `
+    <p>
+      ${msg}
+    </p>
+  
+    `;
+  formSent.insertAdjacentHTML("afterbegin", html);
+  formSent.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
 formSubmit.addEventListener("submit", function (e) {
+  const fullName = formSubmit.fullname.value;
+  const contactEmail = formSubmit.email.value;
+  const subject = formSubmit.subject.value;
+
   try {
     e.preventDefault();
-    this.contact_number.value = (Math.random() * 100000) | 0;
-    emailjs.sendForm("service_xvs3mtg", "contact_form", this).then(
-      function () {
-        formSubmit.fullname.value = "";
-        formSubmit.subject.value = "";
-        formSubmit.email.value = "";
-        formSent.classList.remove("hidden");
-        overlay.classList.remove("hidden");
-        // console.log("Success!");
-      },
-      function (error) {
-        formSent.console.log("Failed...", error);
-      }
-    );
+    if (fullName == "") {
+      modalWindow(`Can't submit message without a name 😅`);
+    } else if (contactEmail == "") {
+      modalWindow(`Can't submit message without contact email 📨`);
+    } else if (subject == "") {
+      modalWindow(`Can't submit an empty message 🔴`);
+    } else if (!fullName == "" && !contactEmail == "" && !subject == "") {
+      this.contact_number.value = (Math.random() * 100000) | 0;
+      emailjs.sendForm("service_xvs3mtg", "contact_form", this).then(
+        function () {
+          formSubmit.fullname.value = "";
+          formSubmit.subject.value = "";
+          formSubmit.email.value = "";
+          modalWindow(
+            `
+            Your message has been sent succesfully! 🎉<br>I'll get back to you as soon as possible 🫡
+            
+            `
+          );
+          formSent.classList.remove("hidden");
+          overlay.classList.remove("hidden");
+          // console.log("Success!");
+        },
+        function (error) {
+          formSent.console.log("Failed...", error);
+        }
+      );
+    }
   } catch (error) {
     formSent.textContent = "";
-    const html = `
-    <p>
-      🔴 Something went wrong 🔴
-      Please try again later.
-    </p>
-    <button class="close_modal">Okay!</button>
-    `;
-    formSent.insertAdjacentHTML("afterbegin", html);
-    formSent.classList.remove("hidden");
-    overlay.classList.remove("hidden");
+    modalWindow(`
+    🔴 Something went wrong 🔴
+    Please try again later.
+    `);
   }
 });

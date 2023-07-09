@@ -322,21 +322,44 @@ li {
 }
 
 .contact_section {
-  padding: 10rem 20rem;
+  margin: 0 auto;
 
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   max-width: 100vw;
   background-color: var(--color-black);
 }
 
-.contact label {
-  text-align: left;
+.contact_section h1 {
+  margin-top: 8rem;
+
+  text-align: center;
+  font-size: 5rem;
+  /* margin: 7rem 15rem; */
+  text-shadow: 4px 3px 5px var(--color-black);
+}
+
+.contact_section h2 {
+  width: 40%;
+  font-size: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  /* text-shadow: 4px 3px 5px var(--color-black); */
+}
+
+.contact {
+  padding: 0 30%;
+  padding-bottom: 5rem;
 }
 
 .contact_form {
   max-height: 500px;
+}
+
+.form_information {
+  margin-top: 3rem;
 }
 
 input[type="text"],
@@ -457,23 +480,23 @@ textarea {
 
   .modal {
     text-align: center;
-    width: 60%;
-    height: 160px;
-    font-size: 1.7rem;
+    width: 90%;
+    min-height: 250px;
+    font-size: 2.5rem;
     background-color: var(--color-black);
-    padding: 2.5rem;
+    padding: 3.5rem;
+    border: 3px solid greenyellow;
   }
 
   .close_modal {
     position: absolute;
-    top: 75%;
+    top: 165px;
     left: 34%;
 
-    border: none;
     background: var(--color-greenyellow);
-    width: 80px;
-    height: 20px;
-    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+    border-radius: 50px;
   }
 
   .overlay {
@@ -632,8 +655,14 @@ textarea {
     font-size: 2rem;
   }
 
-  .contact_section {
-    max-width: inherit;
-    padding: 40px;
+  .contact_section h2 {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    width: 300px;
+  }
+
+  .contact {
+    margin: 0;
+    padding: 10px 65px;
   }
 }
