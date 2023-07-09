@@ -1,6 +1,6 @@
 :root {
   --color-white: white;
-  --color-greenyellow: greenyellow;
+  --color-greenyellow: #adff2f;
   --color-black: black;
   --color-bg-portfolio: linear-gradient(to top left, #39b385, #22da6e);
   --color-bg-portfolio2: linear-gradient(to top left, #ffb003, #ffcb03);
@@ -9,6 +9,7 @@
     #ffb003,
     #ffcb03
   );
+  --text-shadow: 4px 3px 5px var(--color-black);
 }
 
 * {
@@ -127,8 +128,7 @@ li {
   float: right;
   position: relative;
   top: 7rem;
-
-  margin-right: 5rem;
+  margin-right: 10rem;
 }
 
 .profile_picture img {
@@ -188,7 +188,7 @@ li {
   background-image: var(--color-bg-portfolio);
   border-radius: 15px;
   padding: 5px;
-  filter: drop-shadow(2px 2px 5px var(--color-black));
+  filter: drop-shadow(2px 2px 5px black);
 }
 
 .socials li {
@@ -239,7 +239,8 @@ li {
   padding-bottom: 5rem;
 }
 
-.portfolio h1 {
+.portfolio h1,
+h2 {
   text-align: center;
   font-size: 5rem;
   margin: 7rem 15rem;
@@ -260,6 +261,8 @@ li {
 .portfolio__element h2 {
   text-align: left;
   padding: 2rem 2rem;
+  color: black;
+  text-shadow: none;
 }
 
 .portfolio__element p {
@@ -514,7 +517,7 @@ textarea {
     /* position: relative; */
     /* float: right; */
     top: 2rem;
-    transform: translateX(80px);
+    transform: translateX(128px);
   }
 
   .profile_picture img {
@@ -579,6 +582,10 @@ textarea {
     margin: 0;
   }
 
+  .navbar__links a {
+    font-size: 1.8rem;
+  }
+
   .intro {
     margin: 0 auto;
     padding-top: 60rem;
@@ -586,7 +593,9 @@ textarea {
   }
 
   .intro h2 {
+    margin: 0 auto;
     margin-bottom: 4rem;
+    font-size: 4rem;
   }
 
   .intro p {
@@ -600,6 +609,14 @@ textarea {
   .portfolio h1 {
     margin: 0;
     padding-top: 5rem;
+  }
+
+  .portfolio h2 {
+    font-size: 2.5rem;
+    margin: 4rem auto;
+    margin-bottom: 0;
+    text-align: center;
+    width: 350px;
   }
 
   .portfolio {
@@ -630,7 +647,7 @@ textarea {
 
   .portfolio__element {
     min-width: 85vw;
-    height: 740px;
+    height: inherit;
     font-size: 2rem;
   }
 
@@ -658,11 +675,11 @@ textarea {
   .contact_section h2 {
     margin-top: 5rem;
     margin-bottom: 0;
-    width: 300px;
+    width: 350px;
   }
 
   .contact {
     margin: 0;
-    padding: 10px 65px;
+    padding: 10px 30px;
   }
 }
