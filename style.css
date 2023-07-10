@@ -503,7 +503,7 @@ textarea {
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 450px) {
   html {
     font-size: 60%;
   }
@@ -544,7 +544,7 @@ textarea {
     /* position: relative; */
     /* float: right; */
     top: 2rem;
-    transform: translateX(128px);
+    transform: translateX(33%);
   }
 
   .profile_picture img {
@@ -708,5 +708,68 @@ textarea {
   .contact {
     margin: 0;
     padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 55%;
+  }
+
+  .hero {
+  }
+
+  .socials {
+    position: absolute;
+    top: 470px;
+    right: 60px;
+  }
+
+  .modal {
+    scale: 90%;
+    left: 43%;
+  }
+
+  .overlay {
+    max-width: 360px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .profile_picture {
+    margin: 0;
+    right: 25%;
+  }
+
+  .profile_picture img {
+    max-width: 350px;
+    max-height: 400px;
+  }
+
+  .links ul {
+    padding: 0;
+    min-width: 300px;
+  }
+
+  .navbar_links {
+    margin: 0;
+    padding-left: 0;
+    font-size: 0.5rem;
+  }
+
+  .navbar {
+    width: 95%;
+  }
+
+  .navbar.sticky {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+  }
+
+  .portfolio {
+    max-width: 360px;
   }
 }
