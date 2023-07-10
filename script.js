@@ -106,6 +106,7 @@ const modalWindow = function (msg = "") {
 };
 
 formSubmit.addEventListener("submit", function (e) {
+  const _initEmail = "WTOlGcumvWIKf2lfe";
   const fullName = formSubmit.fullname.value;
   const contactEmail = formSubmit.email.value;
   const subject = formSubmit.subject.value;
@@ -120,30 +121,30 @@ formSubmit.addEventListener("submit", function (e) {
       modalWindow(`Can't submit an empty message 🔴`);
     } else if (!fullName == "" && !contactEmail == "" && !subject == "") {
       this.contact_number.value = (Math.random() * 100000) | 0;
-      emailjs.sendForm("service_xvs3mtg", "contact_form", this).then(
-        function () {
-          formSubmit.fullname.value = "";
-          formSubmit.subject.value = "";
-          formSubmit.email.value = "";
-          modalWindow(
-            `
+      emailjs
+        .sendForm("service_xvs3mtg", "contact_form", this, _initEmail)
+        .then(
+          function () {
+            formSubmit.fullname.value = "";
+            formSubmit.subject.value = "";
+            formSubmit.email.value = "";
+            modalWindow(
+              `
             Your message has been sent succesfully! 🎉<br>I'll get back to you as soon as possible 🫡
-            
             `
-          );
-          formSent.classList.remove("hidden");
-          overlay.classList.remove("hidden");
-          // console.log("Success!");
-        },
-        function (error) {
-          formSent.console.log("Failed...", error);
-        }
-      );
+            );
+            formSent.classList.remove("hidden");
+            overlay.classList.remove("hidden");
+            // console.log("Success!");
+          },
+          function (error) {
+            formSent.console.log("Failed...", error);
+          }
+        );
     }
   } catch (error) {
-    formSent.textContent = "";
     modalWindow(`
-    🔴 Something went wrong 🔴
+    🔴 Something went wrong 🔴 <br>
     Please try again later.
     `);
   }
