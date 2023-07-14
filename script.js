@@ -4,6 +4,7 @@
 const navBar = document.querySelector(".navbar");
 const btnHome = document.querySelector(".btn_logo");
 const btnPortfolio = document.querySelector(".btn_portfolio");
+const btnAbout = document.querySelector(".btn_about");
 const btnContact = document.querySelector(".btn_contact");
 
 // Social Buttons
@@ -32,6 +33,17 @@ const formSent = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const closeModal = document.querySelector(".close_modal");
 
+// Inject About me
+const aboutMe = document.querySelector(".about_me");
+const closeAbout = document.querySelector(".close_about");
+
+// Editing
+const aboutText = `Hi! My name is Nestor. Currently I'm going through courses and documentation for Front-End web development, but the goal is to reach Full-Stack status.
+I'm enjoying the process of creating sites using the tools I've learned and molding my ideas until they fit exactly what I wanted to achieve.
+I'm looking forward with excitement to work with others and tackle more challenging projects while pushing myself out of the comfort zone to help make someone's vision the best version of it can be.
+<br><br>Currently learning: HTML, CSS, JS, REACT, PYTHON, DJANGO
+`;
+
 // Sticky navigation bar
 
 const stickyNav = function (entries) {
@@ -59,6 +71,30 @@ btnHome.addEventListener("click", function (e) {
 btnPortfolio.addEventListener("click", function (e) {
   e.preventDefault();
   sectionPortfolio.scrollIntoView({ behavior: "smooth" });
+});
+
+// Make About me appear
+btnAbout.addEventListener("click", function (e) {
+  e.preventDefault();
+  let html = `
+    <p>${aboutText}</p>
+  `;
+  aboutMe.insertAdjacentHTML("beforeend", html);
+  aboutMe.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+// Close about me
+closeAbout.addEventListener("click", function (e) {
+  e.preventDefault();
+  aboutMe.classList.add("slideOut");
+
+  setTimeout(() => {
+    aboutMe.classList.add("hidden");
+    overlay.classList.add("hidden");
+    aboutMe.querySelector("p").remove();
+    aboutMe.classList.remove("slideOut");
+  }, 300);
 });
 
 // Scroll contact section into view
