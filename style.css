@@ -835,9 +835,13 @@ textarea {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 320px) {
   html {
     font-size: 55%;
+  }
+
+  body {
+    width: 360px;
   }
 
   .intro {
@@ -845,13 +849,14 @@ textarea {
   }
 
   .hero {
-    min-width: 380px;
+    /* width: 320px; */
+    background-size: auto;
   }
 
   .socials {
     position: absolute;
-    top: 550px;
-    right: 13%;
+    top: 400px;
+    right: 5%;
   }
 
   .modal {
@@ -870,13 +875,14 @@ textarea {
   .profile_picture {
     float: none;
     position: inherit;
+    transform: translateX(15px);
     margin: 0;
     padding-top: 5rem;
   }
 
   .profile_picture img {
-    min-width: 5px;
-    min-height: 140px;
+    width: 250px;
+    height: 300px;
   }
 
   .links ul {
@@ -891,7 +897,7 @@ textarea {
   }
 
   .navbar {
-    min-width: 380px;
+    min-width: 360px;
   }
 
   .navbar.sticky {
@@ -901,19 +907,27 @@ textarea {
   }
 
   .portfolio {
-    min-width: 380px;
+    min-width: 360px;
   }
 
   .portfolio h2 {
-    width: 330px;
+    width: 320px;
+    text-align: left;
+    padding-top: 0;
   }
 
   .portfolio__element {
     margin-right: 0;
+    padding: 1rem;
+  }
+
+  .portfolio__element img {
+    height: 250px;
+    padding: 0;
   }
 
   .contact_section {
-    min-width: 380px;
+    min-width: 360px;
   }
 
   .contact_section h2 {
