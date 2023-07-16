@@ -907,7 +907,7 @@ textarea {
   .navbar.sticky {
     margin: 0;
     padding: 0;
-    min-width: 380px;
+    min-width: 360px;
   }
 
   .portfolio {
