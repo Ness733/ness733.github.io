@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-    <script defer src="script.js"></script>
-    <title>NR // Web Dev</title>
-  </head>
-  <body>
-    <div class="about_me hidden">
-      <a class="close_about" href="">&times;</a>
-      <h1>ABOUT ME 👋 </h1>
+  <script defer src="script.js"></script>
+  <title>NR // Web Dev</title>
+</head>
+
+<body>
+  <div class="about_me hidden">
+    <a class="close_about" href="">&times;</a>
+    <h1>ABOUT ME 👋 </h1>
+  </div>
+  <div class="modal hidden">
+
+    <button class="close_modal">Okay!</button>
+  </div>
+  <div class="overlay hidden"></div>
+  <header class="navbar">
+    <div class="logo">
+      <img class="btn_logo" src="./icons/logo web.png" alt="" />
     </div>
-    <div class="modal hidden">
-      
-      <button class="close_modal">Okay!</button>
-    </div>
-    <div class="overlay hidden"></div>
-    <header class="navbar">
-      <div class="logo">
-        <img class="btn_logo" src="./icons/logo web.png" alt="" />
-      </div>
-      <div class="socials_nav">
-        <ul>
-          <li class="instagram_icon">
-            <img src="/icons/instagram.svg" alt="">
-          </li>
-          <li class="linkedin_icon">
-            <img src="/icons/linkedin.svg" alt="">
-          </li>
-          <li class="twitter_icon">
-            <img  src="/icons/twitter.svg" alt="">
-          </li>
-        </ul>
-      </div>
-      <span class="links">
-        <ul class="navbar__links">
-          <a class="btn_portfolio" href="#">Portfolio</a>
-          <a class="btn_about" href="#">About me</a>
-          <a class="btn_contact" href="#">Contact</a>
-        </ul>
-      </span>
-    </header>
-    <div class="socials">
+    <div class="socials_nav">
       <ul>
         <li class="instagram_icon">
           <img src="/icons/instagram.svg" alt="">
@@ -59,77 +41,76 @@
           <img src="/icons/linkedin.svg" alt="">
         </li>
         <li class="twitter_icon">
-          <img  src="/icons/twitter.svg" alt="">
+          <img src="/icons/twitter.svg" alt="">
         </li>
       </ul>
     </div>
-    <div class="hero">
-      <div class="profile_picture">
-        <img src="/imgs/intro_pic.png" alt="">
-      </div>
-      <div class="intro">
-        <h1>Nestor Rosales</h1>
-        <h2>// web developer</h2>
-        <p>
-          "In truth, whatever is worth doing at all, is worth doing well; and nothing can be done well without attention." <br> - Philip Stanhope, 1746.
-        </p>
-      </div>
+    <span class="links">
+      <ul class="navbar__links">
+        <a class="btn_portfolio" href="#">Portfolio</a>
+        <a class="btn_about" href="#">About me</a>
+        <a class="btn_contact" href="#">Contact</a>
+      </ul>
+    </span>
+  </header>
+  <div class="socials">
+    <ul>
+      <li class="instagram_icon">
+        <img src="/icons/instagram.svg" alt="">
+      </li>
+      <li class="linkedin_icon">
+        <img src="/icons/linkedin.svg" alt="">
+      </li>
+      <li class="twitter_icon">
+        <img src="/icons/twitter.svg" alt="">
+      </li>
+    </ul>
+  </div>
+  <div class="hero">
+    <div class="profile_picture">
+      <img src="/imgs/intro_pic.png" alt="">
     </div>
+    <div class="intro">
+      <h1>Nestor Rosales</h1>
+      <h2>// web developer</h2>
+      <p>
+        "In truth, whatever is worth doing at all, is worth doing well; and
+        nothing can be done well without attention." <br> - Philip Stanhope,
+        1746.
+      </p>
+    </div>
+  </div>
 
-    <div class="portfolio">
-      <h1>Portfolio</h1>   
-      <h2>These are the projects I've done so far. Some are the culmination of a course, others are my own curiosity and projects that help me solidify the concepts I'm learning along my journey to become a full-stack developer.</h2>
-      <div class="portfolio_block">
-        <div class="portfolio__element">
-          <h2>Project Name</h2>
-  
-          <div class="project_img"><img src="./imgs/web preview.jpg" alt="" /></div>
-          
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, velit
-            suscipit. Explicabo, numquam? Id at Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Perspiciatis, hic. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Id at Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Perspiciatis, hic. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit.
-          </p>
-          <div class="btns">
-            <ul >
-              <li class="btn__live">LIVE</li>
-              <li class="btn__code">CODE</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="portfolio">
+    <h1>Portfolio</h1>
+    <h2>These are the projects I've done so far. Some are the culmination of a
+      course, others are my own curiosity and projects that help me solidify the
+      concepts I'm learning along my journey to become a full-stack developer.
+    </h2>
+    <div class="portfolio_block">
+
     </div>
-    
+  </div>
+
   </div>
   <div class="contact_section">
     <h1>Contact</h1>
-    <h2>You can always find me through my socials, but here you can reach out to me via Email and I'll make sure to get back to you as quick as possible.</h2>
+    <h2>You can always find me through my socials, but here you can reach out to
+      me via Email and I'll make sure to get back to you as quick as possible.
+    </h2>
     <div class="contact">
-        <form class="form_information">
-          <input type="hidden" name="contact_number">
-          <label for="fname">Full Name</label>
-          <input
-            type="text"
-            name="fullname"
-            placeholder="Your full name."
-          />
-          <label for="lname">Contact E-mail</label>
-          <input
-            type="text"            
-            name="email"
-            placeholder="Contact Email."
-          />
-          <textarea
-            name="subject"            
-            placeholder="Your message here..."
-            style="height: 200px"
-          ></textarea>
-          <input class="send_submit" type="submit" value="Send" />
-        </form>
-      </div>
+      <form class="form_information">
+        <input type="hidden" name="contact_number">
+        <label for="fname">Full Name</label>
+        <input type="text" name="fullname" placeholder="Your full name." />
+        <label for="lname">Contact E-mail</label>
+        <input type="text" name="email" placeholder="Contact Email." />
+        <textarea name="subject" placeholder="Your message here..."
+          style="height: 200px"></textarea>
+        <input class="send_submit" type="submit" value="Send" />
+      </form>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -37,6 +37,9 @@ const closeModal = document.querySelector(".close_modal");
 const aboutMe = document.querySelector(".about_me");
 const closeAbout = document.querySelector(".close_about");
 
+// Inject Proyects
+const projectsBlock = document.querySelector(".portfolio_block");
+
 // Editing
 const aboutText = `Hi! My name is Nestor. Currently I'm going through courses and documentation for Front-End web development, but the goal is to reach Full-Stack status.
 I'm enjoying the process of creating sites using the tools I've learned and molding my ideas until they fit exactly what I wanted to achieve.
@@ -141,6 +144,38 @@ const modalWindow = function (msg = "") {
   overlay.classList.remove("hidden");
 };
 
+const addProject = (
+  projectName,
+  projectImg,
+  projectText,
+  projectLive,
+  projectCode
+) => {
+  let html = `
+  <div class="portfolio__element">
+          <h2>${projectName}</h2>
+  
+          <div class="project_img">
+          <img src=${projectImg} alt="project image" />
+          </div>
+          
+          <p>
+            ${projectText}
+          </p>
+          <div class="btns">
+            <ul >
+            <li class="btn__live">
+            <a  href=${projectLive}>LIVE</a>
+            </li>
+              <li class="btn__code">
+              <a class="btn__code" href=${projectCode}>CODE</a></li>
+            </ul>
+          </div>
+        </div>
+  `;
+  projectsBlock.insertAdjacentHTML("afterbegin", html);
+};
+
 formSubmit.addEventListener("submit", function (e) {
   const _initEmail = "WTOlGcumvWIKf2lfe";
   const fullName = formSubmit.fullname.value;
@@ -185,3 +220,10 @@ formSubmit.addEventListener("submit", function (e) {
     `);
   }
 });
+
+addProject(
+  "AnotherMovieDB",
+  "./imgs/movieDB.png",
+  "Small test project to practice fetching data from a movies DB. Unfortunately the Login functionality doesn't work with the API for being in an unsecure domain. Modals, Error Catch, Search and Add To Favorites functionalities. <br/><br/><br/> Made with ReactJS and Bootstrap",
+  "https://ness733.github.io/moviedb-react-alkemy/"
+);
