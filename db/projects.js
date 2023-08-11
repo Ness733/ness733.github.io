@@ -17,5 +17,14 @@ const projects = [
     live: "https://ness733.github.io/bankist-app/",
     code: "https://github.com/Ness733/bankist-app.git",
   },
+  {
+    id: 2,
+    title: "Mapty-App",
+    image: "./imgs/mapty.jpg",
+    description:
+      "This is another project made during the course with Jonas. It's a bit bare-bone for now but it was a great introduction to working with APIs and rendering the data. <br/><br/><br/> Made with JS, HTML and CSS",
+    live: "https://ness733.github.io/mapty-app/",
+    code: "https://github.com/Ness733/mapty-app.git",
+  },
 ];
 export default projects;
