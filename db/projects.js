@@ -8,5 +8,14 @@ const projects = [
     live: "https://ness733.github.io/moviedb-react-alkemy/",
     code: "https://github.com/Ness733/moviedb-react-alkemy/tree/master",
   },
+  {
+    id: 0,
+    title: "Bankist-App",
+    image: "./imgs/bankist.jpg",
+    description:
+      "This is one of the projects I worked on during The Complete JavaScript Course 2023: From Zero to Expert! by Jonas Schmedtmann. Learning about DOM manipulation and DOM navigation. <br/><br/><br/> Made with JS, HTML and CSS",
+    live: "https://ness733.github.io/bankist-app/",
+    code: "https://github.com/Ness733/bankist-app.git",
+  },
 ];
 export default projects;
