@@ -35,5 +35,14 @@ const projects = [
     live: "https://forkify-ness.netlify.app/",
     code: "https://github.com/Ness733/forkify-app.git",
   },
+  {
+    id: 4,
+    title: "Misiotrónica",
+    image: "./imgs/misiotronica.jpg",
+    description:
+      "Este es mi proyecto integrador de la parte Fron-End del Argentina Programa 4.0. Un E-commerce con barra de búsqueda y carrito de compras. <br/><br/><br/> Hecho con ReactJS, JS, Redux y CSS",
+    live: "https://ness733.github.io/Misiotronica/#/Main",
+    code: "https://github.com/Ness733/Misiotronica",
+  },
 ];
 export default projects;
