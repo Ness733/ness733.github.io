@@ -26,5 +26,14 @@ const projects = [
     live: "https://ness733.github.io/mapty-app/",
     code: "https://github.com/Ness733/mapty-app.git",
   },
+  {
+    id: 3,
+    title: "Forkify-App",
+    image: "./imgs/forkify.jpg",
+    description:
+      "This is the final project from Jona's course. A recipes finder App for a not-so-wide variety of meals 😅. This was the perfect project to tie everything I had seen through the course together and comprehend the basics of building this type of Apps in the future. <br/><br/><br/> Made with JS, HTML and CSS",
+    live: "https://forkify-ness.netlify.app/",
+    code: "https://github.com/Ness733/forkify-app.git",
+  },
 ];
 export default projects;
