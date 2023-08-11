@@ -1,5 +1,7 @@
 "use strict";
 
+import projects from "./db/projects.js";
+
 // Navigation Buttons
 const navBar = document.querySelector(".navbar");
 const btnHome = document.querySelector(".btn_logo");
@@ -144,36 +146,32 @@ const modalWindow = function (msg = "") {
   overlay.classList.remove("hidden");
 };
 
-const addProject = (
-  projectName,
-  projectImg,
-  projectText,
-  projectLive,
-  projectCode
-) => {
-  let html = `
-    <div class="portfolio__element">
-      <h2>${projectName}</h2>
+const addProject = () => {
+  projects.map((project) => {
+    let html = `
+      <div key=${project.id} class="portfolio__element">
+        <h2>${project.title}</h2>
 
-      <div class="project_img">
-      <img src=${projectImg} alt="project image" />
+        <div class="project_img">
+        <img src=${project.image} alt="project image" />
+        </div>
+        
+        <p>
+          ${project.description}
+        </p>
+        <div class="btns">
+          <ul >
+          <li class="btn__live">
+          <a  href=${project.live}>LIVE</a>
+          </li>
+            <li class="btn__code">
+            <a class="btn__code" href=${project.code}>CODE</a></li>
+          </ul>
+        </div>
       </div>
-      
-      <p>
-        ${projectText}
-      </p>
-      <div class="btns">
-        <ul >
-        <li class="btn__live">
-        <a  href=${projectLive}>LIVE</a>
-        </li>
-          <li class="btn__code">
-          <a class="btn__code" href=${projectCode}>CODE</a></li>
-        </ul>
-      </div>
-    </div>
   `;
-  projectsBlock.insertAdjacentHTML("beforeend", html);
+    projectsBlock.insertAdjacentHTML("beforeend", html);
+  });
 };
 
 formSubmit.addEventListener("submit", function (e) {
@@ -221,10 +219,4 @@ formSubmit.addEventListener("submit", function (e) {
   }
 });
 
-addProject(
-  "AnotherMovieDB",
-  "./imgs/movieDB.png",
-  "Small test project to practice fetching data from a movies DB. Unfortunately the Login functionality doesn't work with the API for being in an unsecure domain. Modals, Error Catch, Search and Add To Favorites functionalities. <br/><br/><br/> Made with ReactJS and Bootstrap",
-  "https://ness733.github.io/moviedb-react-alkemy/",
-  "https://github.com/Ness733/moviedb-react-alkemy/tree/master"
-);
+addProject();
