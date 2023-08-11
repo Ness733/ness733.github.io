@@ -9,7 +9,7 @@ const projects = [
     code: "https://github.com/Ness733/moviedb-react-alkemy/tree/master",
   },
   {
-    id: 0,
+    id: 1,
     title: "Bankist-App",
     image: "./imgs/bankist.jpg",
     description:
