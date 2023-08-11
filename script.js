@@ -152,28 +152,28 @@ const addProject = (
   projectCode
 ) => {
   let html = `
-  <div class="portfolio__element">
-          <h2>${projectName}</h2>
-  
-          <div class="project_img">
-          <img src=${projectImg} alt="project image" />
-          </div>
-          
-          <p>
-            ${projectText}
-          </p>
-          <div class="btns">
-            <ul >
-            <li class="btn__live">
-            <a  href=${projectLive}>LIVE</a>
-            </li>
-              <li class="btn__code">
-              <a class="btn__code" href=${projectCode}>CODE</a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="portfolio__element">
+      <h2>${projectName}</h2>
+
+      <div class="project_img">
+      <img src=${projectImg} alt="project image" />
+      </div>
+      
+      <p>
+        ${projectText}
+      </p>
+      <div class="btns">
+        <ul >
+        <li class="btn__live">
+        <a  href=${projectLive}>LIVE</a>
+        </li>
+          <li class="btn__code">
+          <a class="btn__code" href=${projectCode}>CODE</a></li>
+        </ul>
+      </div>
+    </div>
   `;
-  projectsBlock.insertAdjacentHTML("afterbegin", html);
+  projectsBlock.insertAdjacentHTML("beforeend", html);
 };
 
 formSubmit.addEventListener("submit", function (e) {
