@@ -151,21 +151,21 @@ const addProject = () => {
     let html = `
       <div key=${project.id} class="portfolio__element">
         <h2>${project.title}</h2>
-
-        <div class="project_img">
-        <img src=${project.image} alt="project image" />
+        <div class="description__block">
+          <p>
+            ${project.description}
+          </p>
+          <img class="project_img" src=${project.image} alt="project preview" />
         </div>
         
-        <p>
-          ${project.description}
-        </p>
         <div class="btns">
-          <ul >
-          <li class="btn__live">
-          <a  href=${project.live}>LIVE</a>
-          </li>
-            <li class="btn__code">
-            <a class="btn__code" href=${project.code}>CODE</a></li>
+          <ul>
+            <li>
+              <a class="btn__live" href=${project.live}>LIVE</a>
+            </li>
+            <li>
+              <a class="btn__code" href=${project.code}>CODE</a>
+            </li>
           </ul>
         </div>
       </div>
